@@ -1,13 +1,13 @@
 
 import cv2
 
-capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture(0) #调用摄像头，内置为0,其他依次增加
 
-retval,image = capture.read()
+retval,image = capture.read() #摄像头读取返回值
 
 while 1:
     ret,img = capture.read()
-    img2 = cv2.resize(img, None, fx=1.5, fy=1.5)
+    img2 = cv2.resize(img, None, fx=1.5, fy=1.5) #翻转画面
 
     center = (len(img2[0]) / 2, len(img2) / 2)
 
@@ -23,7 +23,7 @@ while 1:
         break
 
 
-capture.realease()
+capture.realease()  #清除摄像头缓存（可不写）
 
 
 
