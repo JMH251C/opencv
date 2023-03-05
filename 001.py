@@ -2,21 +2,21 @@ import cv2
 
 import numpy
 
-a = numpy.ones([100,256,3])*255
+a = numpy.ones([100,256,3])*255 #创建一个可以被转化成图片的数组
 
 for y in range(0,100):
-    for x in range(0,256):
+    for x in range(0,256):   #替换像素
         a[y,x]= x
 
 
-cv2.imshow("prprpr",a)
+cv2.imshow("prprpr",a)  #显示图片
 
-r,img = cv2.threshold(a,127,90,cv2.THRESH_BINARY)
+r,img = cv2.threshold(a,127,90,cv2.THRESH_BINARY)  
 
 
-cv2.imshow("prpr",img)
+cv2.imshow("prpr",img) #显示图片
 
-cv2.waitKey()
+cv2.waitKey()  #要想一直显示输出图片，此行必须添加
 
 
 
